@@ -29,7 +29,6 @@ DoubleLinkedList::DoubleLinkedList() {
 	START = NULL;
 }
 
-
 void DoubleLinkedList::addNode() {
 	int nim;
 	string nm;
@@ -47,5 +46,13 @@ void DoubleLinkedList::addNode() {
 			cout << "\nDuplicate number not allowed" << endl;
 			return;
 		}
+		newNode->next = START; //step3
+		if (START != NULL)
+			START->prev = newNode; //step 4
+		newNode->prev = NULL; //step 5
+		START = newNode; //step 6
+		return;
 	}
+
+	
 }
