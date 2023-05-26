@@ -9,3 +9,4 @@ public:
 	Node* next;
 	Node* prev;
 };
+)
